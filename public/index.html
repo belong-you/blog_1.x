@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>鹏北海，凤朝阳。又携键盘两茫茫</title>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script>
+      function oCopy (text) {
+        const el = document.createElement('textarea');
+        el.value = text;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+      }
+    </script>
+  </head>
+  <body>
+    <!--[if lte IE 10]>
+    <div style="height:24px;width:100%;">
+    <p style="line-height:24px;position:fixed;top:0;width:100%;text-align:center;min-width: 900px;background-color:#F6F6CC;color:#333;z-index:901;">
+      当前的浏览器版本过低，部分功能可能会受影响，请尽快升级哦（推荐下载
+      <a href="http://browser.qq.com/" target="blank" title="QQ浏览器">QQ浏览器</a>
+      或
+      <a href="https://www.google.cn/intl/zh-CN/chrome/" target="blank" title="谷歌浏览器">谷歌浏览器</a>
+      ）
+    </p>
+    </div>
+    <![endif]-->
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    
+  </body>
+</html>
