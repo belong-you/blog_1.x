@@ -18,12 +18,10 @@
     </div>
     <div class="news">
       <ul>
-        <router-link 
-          tag="li" 
+        <li
           v-for="(item, index) in links" 
-          :key="index" 
-          :to="'article/' + item.link"
-        >{{ item.title }}</router-link>
+          :key="index"
+        ><a :href="host + '/article/' + item.link">{{ item.title }}</a></li>
       </ul>
     </div>
   </nav>
@@ -33,12 +31,13 @@
 export default {
   data () {
     return {
+      host: 'http://' + location.host,
       scrollTop: 0,
       links: [
-        { title: '网络-对于Cookie你了解多少', link: '2018-04-11' },
-        { title: 'margin: auto 到底是如何解析的', link: '2018-04-13' },
-        { title: 'CSS 是如何影响浏览器元素在文档中的排列',link: '2018-04-15' },
-        { title: 'margin: auto 到底是如何解析的',link: '2018-04-13' }
+        { title: '前端必须要了解的那些 Linux 命令', link: '2020-07-21' },
+        { title: '浅谈 事件循环机制', link: '2020-07-14' },
+        { title: 'Vue 的生命周期',link: '2020-07-13' },
+        { title: '比较实用的一些工具函数',link: '2020-07-12' }
       ]
     }
   },
@@ -134,6 +133,9 @@ export default {
   }
   .news{
     display: none;
+    a{
+      color: #267ef1;
+    }
   }
 }
 @media (min-width: 540px) {

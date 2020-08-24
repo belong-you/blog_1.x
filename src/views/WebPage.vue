@@ -83,6 +83,7 @@ export default {
       timeout: 1000
     }).then(res => {
       this.note = res.data;
+      this.options = Object.keys(this.note);  // 下拉菜单
 
       // 判断数据中有没有相应的数据
       if (this.note[this.tag] === undefined) {
@@ -95,7 +96,6 @@ export default {
 
       this.activeName = this.hash || this.note[this.tag][0].hash;
       this.getText();
-      this.options = Object.keys(this.note);  // 下拉菜单
     }, err => {
       console.warn('内部错误');
     })
@@ -107,7 +107,7 @@ export default {
       // window.scrollTo(0, 0);  // 回到顶部
       this.getText();  // 重新发送请求
     },
-    // 发送请求获取文本
+    // 获取笔记内容
     getText () {
       document.title = '个人笔记 | ' + this.tag;  // 设置 title 值
       axios.get(`${this.$store.state.site}/md/${this.tag}/${this.activeName}.md`,{

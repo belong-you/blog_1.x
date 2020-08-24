@@ -128,16 +128,20 @@ export default {
         system: bro.getOsInfo(),
         browser: bro.bro()
       }
-      this.discussData.unshift(data);
       this.sendRequest();
+      this.discussData.unshift(data);
       this.nickName = this.textarea = '';
     },
     // 发送数据
     sendRequest () {
       Axios.get(`${this.$store.state.site}/data/discuss/add`, {
         params: {
+          name: 'root',
+          password: '123456',
           arr: this.discussData
         }
+      }).then(res => {}, err => {
+        console.log(err)
       })
     }
   }
