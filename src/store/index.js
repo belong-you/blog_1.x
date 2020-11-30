@@ -4,13 +4,19 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    site: 'http://bozai.tech'
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+	state: {
+		count: 10,
+		site: 'http://bozai.tech',  // 数据请求地址
+	},
+	mutations: {
+	},
+	actions: {
+		countIncrement (store, num) {
+            setTimeout(() => {
+                store.state.count += num;
+            }, 1000)
+        }
+	},
+	modules: {
+	}
 })

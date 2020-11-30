@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+power.js
+.git
 
 # local env files
 .env.local

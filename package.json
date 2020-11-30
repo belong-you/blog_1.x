@@ -19,9 +19,13 @@
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
+    "animate.css": "^4.1.1",
     "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "ip": "^1.1.5",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "showdown": "^1.9.1",
     "vue-template-compiler": "^2.6.11"
   }
 }
