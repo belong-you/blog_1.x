@@ -1,19 +1,19 @@
-# blog
+### 依赖安装 `npm install`
 
-## Project setup
-```
-npm install
-```
+### 运行项目 `npm run dev`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 项目打包 `npm run build`
 
-### Compiles and minifies for production
+## 项目目录：
 ```
-npm run build
+vite_react_ts
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ src
+│  ├─ Comp.tsx
+│  ├─ mail.tsx
+│  └─ reset.scss
+├─ tsconfig.json
+└─ vite.config.js
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
